@@ -1,0 +1,883 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: 'King Kids';
+    src: url('King Kids.otf') format('otf'); /* Adjust the path and format as needed */
+}
+
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: "Poppins", sans-serif;
+    width: fit-content;
+}
+
+::selection {
+    background-color: #2c2727; /* Set the background color when text is highlighted */
+    color: #f3e0e5; /* Set the text color when text is highlighted */
+}
+
+.logo-container {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* The logo takes auto width and the menu takes the remaining space */
+    align-items: center; /* Align items vertically */
+    z-index: 1; /* Set a higher z-index to ensure it's above the image */
+    background-image: linear-gradient(to bottom, #0e0c0cbb, #16131354, #57575700 ); /* Adjust colors as needed */
+
+}
+
+
+.logo {
+    /* Remove fixed positioning */
+    /* width: 250px; */
+    /* height: auto; */
+    /* margin-right: 20px; */
+
+    /* Set maximum width to avoid overflow */
+    grid-column-start: 1;
+    max-width: 250px; 
+    min-width: 30px;
+    height: auto;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.read-more-buttonota {
+    grid-column: 12/13;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-right: 20px;
+    min-width: 150px;
+}
+
+.read-more-buttonota a {
+    grid-column: 12/13;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 0px;
+    background-color: #00000000; /* Your desired background color */
+    color: rgb(255, 255, 255);
+    border: 2px solid white;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+
+}
+
+.read-more-buttonota a:hover {
+    background-color: #f76679; /* Your desired background color on hover */
+    color: rgb(239, 241, 255);
+    font-weight: 300;
+    border: 0px solid white; /* Add a white border */
+}
+
+
+.read-more-buttonota1 {
+    grid-column: 2;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: left;
+    margin-left: 0px;
+    margin-right: 20px;
+    margin-left: 30px;
+    min-width: 150px;
+    justify-self: center; /* Center the button horizontally */
+}
+
+.read-more-buttonota1 a {
+    grid-column: 2;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #f76679; /* Your desired background color */
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+
+}
+
+.read-more-buttonota1 a:hover {
+    background-color: #1d1819; /* Your desired background color on hover */
+    color: rgb(241, 168, 184);
+    font-weight: 300;
+    border: 0px solid white; /* Add a white border */
+}
+
+
+.read-more-buttonota a:hover {
+    background-color: #f76679; /* Your desired background color on hover */
+    color: rgb(239, 241, 255);
+    font-weight: 300;
+    border: 0px solid white; /* Add a white border */
+}
+
+
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.829);
+    z-index: 9999; /* Ensure the overlay is on top */
+}
+
+.close-btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    color: #fff;
+    z-index: 10000; /* Ensure the close button is on top of the overlay */
+}
+
+.x {
+    max-width: 40px;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+  
+.menu {
+    grid-column-start: 6;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 70px;
+    display: flex;
+    justify-content: flex-end; /* Align menu to the right */
+    align-items: center; /* Align items vertically */
+    margin-left: 50px;
+}
+.menu li {
+    margin-right: 30px; /* Add margin between menu items */
+}
+
+.menu li:hover {
+    animation: popup 0.1s ease-in-out forwards , jiggle 0.4s ease-in-out 0.1s infinite alternate;
+}
+
+@keyframes popup {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes jiggle {
+    0% {
+        transform: rotate(-2deg) scale(1.2); /* Adjusted rotation angle and scale */
+    }
+    100% {
+        transform: rotate(2deg) scale(1.2); /* Adjusted rotation angle and scale */
+    }
+}
+
+.menu li:last-child {
+    margin-right: 0; /* Remove margin from last menu item */
+}
+
+.menu li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255); /* Set link color */
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+.menu li a:hover {
+    color: #fac1c1;
+}
+
+.hero {
+    position: relative;
+    width: 100%; /* Make the hero section span the entire width */
+    max-width: 1920px; /* Optional: Set a maximum width to maintain readability on larger screens */
+    overflow: hidden; /* Ensure the hero image doesn't overflow */
+
+}
+
+.hero-image {
+    width: 100%; /* Set the width to 100% to make the image responsive */
+    height: 600px; /* Set the height as desired */
+    justify-content: center;
+    align-content: center;
+    background-size: cover; /* Scale the background image to cover the entire container */
+    background-position: center; /* Center the background image */
+    filter: brightness(50%)
+}
+
+.thumbnail {
+    width: 100%;
+    min-height: 800px; /* Set minimum height as desired */
+    object-fit: cover; /* Crop the image to cover its container */
+}
+
+.curved-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 165px; /* Adjust the height of the curved divider */
+    background-image: url('Asset\ 10.svg'); /* Replace 'path/to/your/curved-divider-image.png' with the actual path to your curved divider image */
+    background-size: cover;
+    background-position: center bottom;
+    z-index: 1; /* Ensure the curved divider is behind other content */
+}
+
+.textonhero {
+    position: absolute;
+    top: 53%; /* Adjust as needed to vertically center the text */
+    left: 50%; /* Adjust as needed to horizontally center the text */
+    transform: translate(-50%, -80%); /* Center the text both horizontally and vertically */
+    font-size: 80px;
+    text-align: center;
+    color: white; /* Set text color */
+    max-width: 1000px;
+    min-width: 50%;
+    height: auto;
+}
+
+
+.terve {
+    max-width: 100%;
+    min-width: 300px;
+    height: auto;
+}
+
+.terve {
+    opacity: 0;
+    animation: fadeInImage 2s ease forwards;
+    animation-delay: 0s; /* Delay for the image */
+}
+
+.divider {
+    grid-column-start: 2;
+    border: none;
+    border-top: 1px solid #a8a8a846; /* Grey color */
+    margin: 10px 0; /* Adjust margin as needed */
+    
+}
+
+
+.text {
+    margin: 0;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr ;
+    margin-bottom: 100px;
+}
+
+.options {
+    grid-column-start: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto; /* Dividing into 2 rows */
+    margin-bottom: 20px;
+}
+
+
+.option1 {
+    grid-row: 1;
+    grid-column-start: 1;
+    padding: 30px;
+}
+
+.option1 ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.box1 {
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Adjust values as needed */
+    padding: 30px;
+    height: 200px;
+    max-height: 360px;
+    min-width: 260px;
+    text-align: center;
+}
+
+.option2 {
+    grid-row: 1;
+    grid-column-start: 2;
+    padding: 30px;
+}
+
+.option2 li, .option1 li, .option3 li {
+    text-align: center;
+}
+
+.option2 ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.option3 {
+    grid-row: 1;
+    grid-column-start: 3;
+    padding: 30px;
+}
+
+.option3 ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.option4 {
+    grid-row-start: 2; /* Start from the second row */
+    grid-column-start: 1; /* Start from the first column */
+    grid-column-end: span 3; /* Span across all three columns */
+    padding:  20px 0 20px 0;
+}
+
+.option4 ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+@keyframes fadeInImage {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-form {
+    grid-column-start: 2;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form h2 {
+    font-family: "Poppins", sans-serif;
+    color: #e7909c;
+    margin-top: 0;
+    justify-self: center;
+    text-align: center;
+    margin-bottom: 5px; /* Reduce margin-bottom to bring label closer to input */
+
+}
+
+
+.contact-form label {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    color: #e7909c;
+    margin: 0;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    border: 1px solid #e7909c;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5px; /* Reduce margin-top to bring input closer to label */
+    margin-bottom: 20px;
+    max-width: 1210px;
+}
+
+.bigbutton {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.bigbutton input[type="submit"] {
+    background-color: #eb8991;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    width: 100%;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #181616;
+}
+
+
+
+.footergrid {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr 1fr 1fr;
+}
+
+.logofooter{
+    grid-column-start: 1 / 2;
+    width: 70%;
+    min-width: 350px;
+    justify-items: center;
+    align-items: center;
+    padding: 30px;
+    margin-left: 40px;
+    margin-bottom: 150px;
+}
+
+.auki-container {
+    grid-column: 2 / 3; /* Spanning the second column */
+    grid-row: 1; /* Placing the container in the first row */
+    display: flex;
+    flex-direction: column;
+}
+
+.auki {
+    grid-column-start: 2;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    margin: 0;
+}
+
+.aukitit {
+    grid-column-start: 2;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.aukiend {
+    grid-column-start: 2;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.second-container {
+    grid-column: 3 / 4; /* Spanning the second column */
+    grid-row: 1; /* Placing the container in the first row */
+    display: flex;
+    flex-direction: column;
+}
+
+
+.second {
+    grid-column-start: 3/4;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    margin: 0;
+}
+
+.secondtit {
+    grid-column-start: 3/4;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.secondtit1 {
+    grid-column-start: 3/4;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.secondend {
+    grid-column-start: 3/4;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.second-container {
+    grid-column: 3 / 4; /* Spanning the second column */
+    grid-row: 1; /* Placing the container in the first row */
+    display: flex;
+    flex-direction: column;
+}
+
+
+.third {
+    grid-column-start: 4/5;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    margin: 0;
+}
+
+.thirdtit {
+    grid-column-start: 4;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.thirdtit1 {
+    grid-column-start: 4;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.thirdend {
+    grid-column-start: 4;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.facebook-btn,
+.instagram-btn {
+    margin: 0 5px; /* Adjust margin as needed */
+}
+
+.facebook-btn img,
+.instagram-btn img {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+}
+
+
+
+
+.end {
+    background-color: #0f0c0c;
+    margin: 0;
+    padding: 1px;
+}
+
+.endtext {
+    color: aliceblue;
+    padding: 5px;
+    text-align: right;
+    font-weight: 200;
+    margin-right: 30px;
+}
+
+
+
+    
+    @media (max-width: 1200px) {
+    
+
+    
+        .logo-container img {
+            margin-top: 20px;
+        }
+    
+        .curved-divider {
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            width: 100%;
+            height: calc(95px + 0.5vw);
+            min-height: auto;
+            background-image: url('Asset\ 10.svg'); /* Replace 'path/to/your/curved-divider-image.png' with the actual path to your curved divider image */
+            background-size: cover;
+            background-position: center bottom;
+            z-index: 1; /* Ensure the curved divider is behind other content */
+        }
+    
+
+        .logo {
+            grid-column-start: 1;
+            max-width: 300%; 
+            min-width: 50px;
+            height: auto;
+
+        }
+        
+        .hero-image {
+            width: 100%; /* Set the width to 100% to make the image responsive */
+            height: 700px; /* Set the height as desired */
+        }
+
+
+        .thumbnail {
+            width: 100%;
+            min-height: 800px; /* Set minimum height as desired */
+            object-fit: cover; /* Crop the image to cover its container */
+        }
+
+        .text li {
+            list-style: none;
+        }
+
+        .box1 {
+            padding: 30px;
+            height: 200px;
+            max-height: 360px;
+            min-width: 260px;
+            }
+        
+
+        .options {
+            grid-column-start: 2;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            max-height: 1400px;
+        }
+
+        .option1 {
+            grid-column-start: 1;
+            grid-row-start: 1;
+            padding: 30px;
+            max-height: 300px;
+        }
+        
+        .option2 {
+            grid-column-start: 1;
+            grid-row-start: 2;
+            padding: 30px;
+            max-height: 300px;
+        }
+        
+        .option3 {
+            grid-column-start: 1;
+            grid-row-start: 3;
+            padding: 30px;
+            max-height: 300px;
+        }
+        
+        .option4 {
+            grid-column-start: 1;
+            grid-row-start: 4;
+            
+        }
+
+        .contact-form {
+            margin-top: 100px;
+        }
+
+        .footergrid {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr, 1fr, 1fr, 1fr; /* Four rows */
+        }
+        
+        .logofooter{      
+            grid-row: 1;
+            width: 70%;
+            min-width: 350px;
+            max-width: 700px;
+            justify-self: center;
+            align-self: center;
+            padding: 30px;
+            margin-left: 0px;
+            margin-bottom: 20px;
+        }
+    
+        .auki-container {
+            grid-column-start: 1;
+            grid-row: 2;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    
+        .second-container {
+            grid-column-start: 1;
+            grid-row: 3;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    
+        .third-container {
+            grid-column-start: 1;
+            grid-row: 4;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+    
+        .auki, .second, .third {
+            grid-column-start: 1;
+        }
+    
+        .secondtit, .thirdtit, .aukitit {
+            grid-column-start: 1;
+        }
+        
+        .secondtit1, .thirdtit1 {
+            grid-column-start: 1;
+        }
+        
+        .secondend, .thirdend, .aukiend {
+            grid-column-start: 1;
+            margin-bottom: 10px;
+        }
+    
+        .endtext{
+            font-size: 70%;
+            margin-right: 10px;
+        }
+    
+
+        
+    }
+    
+    @media (max-width: 1200px) {
+
+        .menu-toggle {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            grid-column: 12/13;
+            width: 30px;
+            height: 20px;
+            margin-right: 25px;
+            cursor: pointer;
+        }
+    
+        .bar {
+            width: 100%;
+            height: 4px;
+            background-color: #ffffff;
+        }
+    
+    
+        .menuoverlay {
+            margin-top: 250px; /* Adjust margin-top for the overlay menu */
+        }
+    
+        .menuoverlay li,
+        ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+    
+        .text ul{
+            list-style: disc;
+            text-align: left;
+            padding: 0;
+            margin: 0;
+        
+        }
+
+        .text li{
+            margin-bottom: 10px;
+        }
+
+        .menuoverlay li a {
+            text-decoration: none;
+            color: rgb(255, 255, 255); /* Set link color */
+            font-weight: 500;
+            font-size: 30px;
+            font-style: normal;
+        }
+    
+        .overlay {
+            display: none;
+        }
+    
+        .overlay {
+            opacity: 0;
+            animation: fadeInImage 0.3s ease forwards;
+        }
+    
+        @keyframes fadeInImage {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    
+        .overlayfbig {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+    
+        .facebook-btn1,
+        .instagram-btn1 {
+            margin: 0 10px; /* Adjust margin as needed */
+        }
+    
+        .facebook-btn1 img,
+        .instagram-btn1 img {
+            width: 50px; /* Adjust size as needed */
+            height: 50px; /* Adjust size as needed */
+        }
+
+        .menu {
+            display: none; /* Hide the menu list */
+        }
+
+        .read-more-buttonota {
+            display: none; /* Hide the menu list */
+        }
+    
+        .option1 ul {
+            margin: 0;
+            list-style: none;
+            padding: 0;
+        }
+        .option2 ul {
+            margin: 0;
+            list-style: none;
+            padding: 0;
+        }        
+        .option3 ul {
+            margin: 0;
+            list-style: none;
+            padding: 0;
+        }
+
+        
+}

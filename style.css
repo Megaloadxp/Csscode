@@ -1,0 +1,1089 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: 'King Kids';
+    src: url('King Kids.otf') format('otf'); /* Adjust the path and format as needed */
+}
+
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: "Poppins", sans-serif;
+    width: fit-content;
+}
+
+::selection {
+    background-color: #ffffff; /* Set the background color when text is highlighted */
+    color: #4e1523; /* Set the text color when text is highlighted */
+}
+
+.headerwrap {
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 80%;
+}
+
+.hero {
+    position: relative;
+    width: 100%; /* Make the hero section span the entire width */
+    overflow: hidden; /* Ensure the hero image doesn't overflow */
+
+}
+
+.hero-image {
+    width: 100%; /* Set the width to 100% to make the image responsive */
+    height: 930px; /* Set the height as desired */
+    background-size: cover; /* Scale the background image to cover the entire container */
+    background-position: center; /* Center the background image */
+    filter: brightness(50%)
+}
+
+
+.logo-container {
+    position: fixed;
+    top: 23px ;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* The logo takes auto width and the menu takes the remaining space */
+    align-items: center; /* Align items vertically */
+    z-index: 1; /* Set a higher z-index to ensure it's above the image */
+    background-image: linear-gradient(to bottom, #000000b0, #22222246, #57575700 ); /* Adjust colors as needed */
+
+}
+
+.logo {
+    /* Remove fixed positioning */
+    /* width: 250px; */
+    /* height: auto; */
+    /* margin-right: 20px; */
+
+    /* Set maximum width to avoid overflow */
+    grid-column-start: 1;
+    max-width: 250px; 
+    min-width: 30px;
+    height: auto;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.829);
+    z-index: 9999; /* Ensure the overlay is on top */
+}
+
+.close-btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    color: #fff;
+    z-index: 10000; /* Ensure the close button is on top of the overlay */
+}
+
+.x {
+    max-width: 40px;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+  
+.menu {
+    grid-column-start: 6;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end; /* Align menu to the right */
+    align-items: center; /* Align items vertically */
+    margin-left: 50px;
+}
+
+
+.menu li {
+    margin-right: 30px; /* Add margin between menu items */
+    white-space: nowrap; /* Prevent the text from wrapping onto the next line */
+}
+
+.menu li:hover {
+    animation: popup 0.1s ease-in-out forwards , jiggle 0.4s ease-in-out 0.1s infinite alternate;
+}
+
+@keyframes popup {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes jiggle {
+    0% {
+        transform: rotate(-2deg) scale(1.2); /* Adjusted rotation angle and scale */
+    }
+    100% {
+        transform: rotate(2deg) scale(1.2); /* Adjusted rotation angle and scale */
+    }
+}
+
+.menu li:last-child {
+    margin-right: 0; /* Remove margin from last menu item */
+}
+
+.menu li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255); /* Set link color */
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+.menu li a:hover {
+    
+    color: #fac1c1;
+}
+
+
+
+.textonhero {
+    position: absolute;
+    top: 53%; /* Adjust as needed to vertically center the text */
+    left: 50%; /* Adjust as needed to horizontally center the text */
+    transform: translate(-50%, -55%); /* Center the text both horizontally and vertically */
+    text-align: center;
+    color: white; /* Set text color */
+    max-width: 800px;
+    min-width: 50%;
+    height: auto;
+}
+
+.terve {
+    max-width: 80%;
+    min-width: 300px;
+    height: auto;
+}
+
+.intro {
+    max-width: 100%;
+    min-width: 300px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: auto;
+}
+
+.terve {
+    opacity: 0;
+    animation: fadeInImage 2s ease forwards;
+    animation-delay: 0.5s; /* Delay for the image */
+}
+
+.intro {
+    opacity: 0;
+    animation: fadeInText 2s ease forwards;
+    animation-delay: 1s; /* Delay for the paragraph */
+}
+
+.read-more-buttonvaraa {
+    opacity: 0;
+    animation: fadeInText1 2s ease forwards;
+    animation-delay: 1.5s; /* Delay for the paragraph */
+}
+
+
+@keyframes fadeInImage {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInText1 {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.option-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0px;
+}
+
+
+.option {
+    position: relative;
+    flex: 1; /* Each option div takes up equal space */
+    height: 1080px; /* Set the height for the option divs */
+    overflow: hidden; /* Crop the content that overflows the div */
+}
+
+
+
+/* Initial state for .option elements */
+.option .grid-container {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease, transform 1s ease;
+}
+
+/* Animated state for .option elements */
+.option.animate .grid-container {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+.option::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(24, 23, 23, 0.616) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.option:hover::before {
+    opacity: 1;
+}
+
+.grid-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto; /* Adjust as needed */
+    grid-template-rows: auto auto; /* Adjust as needed */
+    gap: 10px; /* Adjust the gap between grid items */
+}
+
+.title1 {
+    font-size: 35px; /* Adjust as needed */
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 0;
+}
+
+.title2 {
+    font-size: 35px; /* Adjust as needed */
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 0;
+    text-align: right;
+}
+
+
+.bottom-left-text,
+.bottom-right-text {
+    color: white;
+    margin: 0;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 0;
+}
+
+.bottom-right-text {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.bottom-left-text {
+    margin-bottom: 20px;
+}
+
+.options {
+    width: 100%; /* Make the images span the whole divs */
+    height: 100%; /* Make the images span the whole divs */
+    object-fit: cover; /* Ensure the images cover the entire div */
+}
+
+.options2 {
+    width: 100%; /* Make the images span the whole divs */
+    height: 100%; /* Make the images span the whole divs */
+    object-fit: cover; /* Ensure the images cover the entire div */
+}
+
+.read-more-button {
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    text-align: right;
+    margin-right: 50px;
+    margin-bottom: 70px;
+}
+
+.read-more-buttonitse {
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    text-align: left;
+    margin-left: 50px;
+    margin-bottom: 70px;
+}
+
+.read-more-buttonosto {
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    text-align: left;
+    margin-left: 0px;
+    margin-bottom: 70px;
+}
+
+.read-more-buttonmerkki {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    text-align: left;
+    margin-left: 0px;
+    margin-bottom: 70px;
+}
+
+.read-more-buttonvaraa {
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+    margin-left: 0px;
+    margin-right: 0px;
+    min-width: 400px;
+}
+
+.read-more-buttonota {
+    grid-column: 12 / 13;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-right: 20px;
+    min-width: 150px;
+}
+
+.read-more-button a, .read-more-buttonitse a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fd6981d2; /* Your desired background color */
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.read-more-buttonosto a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffffea; /* Your desired background color */
+    color: rgb(255, 166, 0);
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.read-more-buttonmerkki a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffffea; /* Your desired background color */
+    color: rgb(199, 43, 69);
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.read-more-buttonvaraa a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 0px;
+    background-color: #f7e9e9; /* Your desired background color */
+    color: rgb(27, 23, 23);
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.read-more-buttonota a {
+    grid-column: 12 / 13;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 0px;
+    background-color: #00000000; /* Your desired background color */
+    color: rgb(255, 255, 255);
+    border: 2px solid white;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+
+}
+
+
+.read-more-button a:hover {
+    background-color: #141313; /* Your desired background color on hover */
+}
+
+.read-more-buttonitse a:hover {
+    background-color: #1a1818; /* Your desired background color on hover */
+}
+
+.read-more-buttonosto a:hover {
+    background-color: #1a1818; /* Your desired background color on hover */
+    color: aliceblue;
+}
+
+.read-more-buttonmerkki a:hover {
+    background-color: #1a1818; /* Your desired background color on hover */
+    color: aliceblue;
+}
+
+.read-more-buttonvaraa a:hover {
+    background-color: #f76679; /* Your desired background color on hover */
+    color: rgb(239, 241, 255);
+    font-weight: 300;
+    border: 0px solid white; /* Add a white border */
+}
+
+.read-more-buttonota a:hover {
+    background-color: #f76679; /* Your desired background color on hover */
+    color: rgb(239, 241, 255);
+    font-weight: 300;
+    border: 0px solid white; /* Add a white border */
+}
+
+
+.side2 {
+    display: flex;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.side1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.side2 img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Initial state */
+.side2 h2,
+.side2 p,
+.side2 .read-more-buttonmerkki {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Animated state */
+.side2 h2.animate,
+.side2 p.animate,
+.side2 .read-more-buttonmerkki.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.side1 img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.side1 .right-div {
+    width: 100%;
+    background-color: rgb(255, 213, 123);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Initial state */
+.side1 h2,
+.side1 p,
+.side1 .read-more-buttonosto {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Animated state */
+.side1 h2.animate,
+.side1 p.animate,
+.side1 .read-more-buttonosto.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.right-div {
+    width: 50%;
+    background-color: rgb(243, 193, 206);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.right-div h2 {
+    max-width: 70%;
+    text-align: center;
+    font-size: 35px; /* Adjust as needed */
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    margin-top: 70px;
+}
+
+.right-div p {
+    max-width: 70%;
+    text-align: center;
+    color: white;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.map {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 50px;
+    margin-top: 0px;
+    margin-bottom: 70px;
+
+}
+.tietobox {
+    grid-column: 3/4;
+    margin-left: 0px;
+    background-color: #fac1c1;
+    
+}
+
+.tieto1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    font-size: 34px;
+    margin-left: 30px;
+    margin-top: 80px;
+
+}
+
+.tieto2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+.map iframe {
+    grid-column: 1 / 3;
+    width: 100%;
+    height: 450px;
+}
+
+
+.footergrid {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr 1fr 1fr;
+}
+
+.logofooter{
+    grid-column-start: 1 / 2;
+    width: 70%;
+    min-width: 350px;
+    justify-items: center;
+    align-items: center;
+    padding: 30px;
+    margin-left: 40px;
+    margin-bottom: 150px;
+}
+
+.auki-container {
+    grid-column: 2 / 3; /* Spanning the second column */
+    grid-row: 1; /* Placing the container in the first row */
+    display: flex;
+    flex-direction: column;
+}
+
+.auki {
+    grid-column-start: 2;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    margin: 0;
+}
+
+.aukitit {
+    grid-column-start: 2;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.aukiend {
+    grid-column-start: 2;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.second-container {
+    grid-column: 3 / 4; /* Spanning the second column */
+    grid-row: 1; /* Placing the container in the first row */
+    display: flex;
+    flex-direction: column;
+}
+
+
+.second {
+    grid-column-start: 3/4;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    margin: 0;
+}
+
+.secondtit {
+    grid-column-start: 3/4;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.secondtit1 {
+    grid-column-start: 3/4;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.secondend {
+    grid-column-start: 3/4;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.second-container {
+    grid-column: 3 / 4; /* Spanning the second column */
+    grid-row: 1; /* Placing the container in the first row */
+    display: flex;
+    flex-direction: column;
+}
+
+
+.third {
+    grid-column-start: 4/5;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    margin: 0;
+}
+
+.thirdtit {
+    grid-column-start: 4;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.thirdtit1 {
+    grid-column-start: 4;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.thirdend {
+    grid-column-start: 4;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.facebook-btn,
+.instagram-btn {
+    margin: 0 5px; /* Adjust margin as needed */
+}
+
+.facebook-btn img,
+.instagram-btn img {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+}
+
+
+
+
+.end {
+    background-color: #0f0c0c;
+    margin: 0;
+    padding: 1px;
+}
+
+.endtext {
+    color: aliceblue;
+    padding: 5px;
+    text-align: right;
+    font-weight: 200;
+    margin-right: 30px;
+}
+
+@media (max-width: 900px) {
+
+
+    .logo-container img {
+        margin-top: 20px;
+        
+      }
+
+    
+    
+    .map {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr ;
+        padding: 50px;
+        margin-top: 0px;
+    }    
+
+    .tietobox {
+        grid-column: 1/4;
+        grid-row-start: 2;
+        margin-left: 0px;
+        
+    }
+
+    .tieto1 {
+        text-align: center;
+        margin: 0;
+    }
+    
+    .tieto2 {
+        text-align: center;
+        margin: 0;
+        margin-top: 10px;
+    }
+
+
+    .footergrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr, 1fr, 1fr, 1fr; /* Four rows */
+    }
+    
+    .logofooter{      
+        grid-row: 1;
+        width: 70%;
+        min-width: 350px;
+        justify-items: center;
+        align-items: center;
+        padding: 30px;
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+
+    .auki-container {
+        grid-column-start: 1;
+        grid-row: 2;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .second-container {
+        grid-column-start: 1;
+        grid-row: 3;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .third-container {
+        grid-column-start: 1;
+        grid-row: 4;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .auki, .second, .third {
+        grid-column-start: 1;
+    }
+
+    .secondtit, .thirdtit, .aukitit {
+        grid-column-start: 1;
+    }
+    
+    .secondtit1, .thirdtit1 {
+        grid-column-start: 1;
+    }
+    
+    .secondend, .thirdend, .aukiend {
+        grid-column-start: 1;
+        margin-bottom: 10px;
+    }
+
+    .endtext{
+        font-size: 70%;
+        margin-right: 10px;
+    }
+
+    
+
+}
+
+
+
+@media (min-width: 900px) {
+    .side2, .side1 {
+        flex-direction: row; /* Display child divs side by side on larger screens */
+    }
+    .right-div {
+        flex-basis: 50%; /* Each div takes up 50% width on larger screens */
+    }
+
+    .title1 {
+        font-size: 34px; /* Set minimum font size for screens smaller than 600px */
+    }
+    
+    .right-div h2 {
+        font-size: 34px; /* Set minimum font size for screens smaller than 600px */
+    }
+    
+    .side1 {
+        flex-direction: row-reverse; /* Reverse the order of flex items */
+    }
+
+    .side1 img,
+    .side1 .right-div {
+        width: 50%; /* Each takes 50% of the container width */
+    }
+
+    .side1.right-div {
+        order: -1; /* Place the right div before the img on larger screens */
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .option {
+        flex-basis: 100%; /* Full width on smaller screens */
+    }
+    
+    .option::before {
+        opacity: 1; /* Ensure the gradient overlay stays visible */
+    }
+    
+    .side2, .side1 {
+        flex-direction: column; /* Stack the child divs vertically */
+    }
+
+    .side2 img, .side1 img {
+        width: 100%; /* Make the image span the full width */
+        min-width: 100%; /* Set the minimum width for the image to 100% */
+        max-width: unset; /* Remove the max-width property */
+        height: auto; /* Allow the height to adjust based on the width */
+        object-fit: cover; /* Ensure the image covers the entire container */
+        max-height: 50vh; /* Set the maximum height to maintain aspect ratio */
+    }
+
+    .logofooter {
+        justify-self: center; /* Align horizontally to the center */
+        align-self: center; /* Align vertically to the center */
+    }
+
+    .right-div {
+        width: 100%; /* Make the right div span the full width */
+        flex-basis: unset; /* Remove the flex-basis property */
+    }
+
+    .title1 {
+        font-size: calc(20px + 2vw); /* Responsive font size based on viewport width */
+        margin-left: 50px; /* Adjust margin-left for smaller screens */
+    }
+    
+    .right-div h2 {
+        font-size: calc(25px + 2vw); /* Responsive font size based on viewport width */
+        margin-left: 0px; /* Adjust margin-left for smaller screens */
+        max-width: 90%;
+    }
+
+    .tieto1 {
+        font-size: calc(20px + 2vw); /* Responsive font size based on viewport width */
+        margin-top: 100px;
+    }
+    
+}
+
+
+@media (max-width: 1100px) {
+    .read-more-buttonota {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        grid-column: 12/13;
+        width: 30px;
+        height: 20px;
+        margin-right: 25px;
+        cursor: pointer;
+      }
+    
+    .bar {
+        width: 100%;
+        height: 4px;
+        background-color: #ffffff;
+      }
+    
+    .menu {
+        display: none;
+    }
+    
+    .menuoverlay {
+        margin-top: 250px;
+    }
+    
+    .menuoverlay li, ul {
+        list-style: none;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 20px;
+      }
+
+    .menuoverlay li a {
+        text-decoration: none;
+        color: rgb(255, 255, 255); /* Set link color */
+        font-weight: 500;
+        font-size: 30px;
+        font-style: normal;
+      }
+
+      .overlay {
+        display: none;
+    }
+    
+    .overlay {
+        opacity: 0;
+        animation: fadeInImage 0.3s ease forwards;
+    
+    }
+    
+    
+    @keyframes fadeInImage {
+        0% {
+            opacity: 0;
+
+        }
+        100% {
+            opacity: 1;
+
+        }
+    }
+    
+
+    .overlayfbig {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .facebook-btn1,
+    .instagram-btn1 {
+    margin: 0 10px; /* Adjust margin as needed */
+    }
+
+    .facebook-btn1 img,
+    .instagram-btn1 img {
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    }
+
+
+
+    .menu {
+        display: none; /* Hide the menu list */
+    }
+
+    .logo {
+        grid-column-start: 1;
+        max-width: 300%; 
+        min-width: 50px;
+        height: auto;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+    
+}
